@@ -3,7 +3,7 @@
         'name' => 'mppankov/blog',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '45649e18b9d2269a6c0e15559a8394e67f89edc2',
+        'reference' => '522470df36b888e98b474298ce1dab27aa54f250',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'mppankov/blog' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '45649e18b9d2269a6c0e15559a8394e67f89edc2',
+            'reference' => '522470df36b888e98b474298ce1dab27aa54f250',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
