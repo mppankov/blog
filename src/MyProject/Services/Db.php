@@ -6,7 +6,6 @@ use PDO;
 
 class Db
 {
-    /** @var PDO */
     private PDO $pdo;
 
     public function __construct()
@@ -21,16 +20,16 @@ class Db
         $this->pdo->exec('SET NAMES UTF8');
     }
 
-    public function query(string $sql, $params = []): ? array
+    public function query(string $sql, array $params = [], string $className = 'stdClass'): ? array
     {
         $sth = $this->pdo->prepare($sql);
         $result = $sth->execute($params);
 
-        if ($result === false) {
+        if (false === $result) {
             return null;
         }
 
-        return $sth->fetchAll();
+        return $sth->fetchAll(PDO::FETCH_CLASS, $className);
     }
 }
 
