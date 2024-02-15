@@ -18,9 +18,9 @@ class MainController
         $this->db = new Db();
     }
 
-    public function main()
+    public function main(): void
     {
-        $articles = $this->db->query('SELECT * FROM `articles`;', [], Article::class);
+        $articles = Article::findAll();
         $this->view->renderHtml('main/main.php', ['articles' => $articles]);
     }
 }

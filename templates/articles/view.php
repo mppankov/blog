@@ -1,8 +1,5 @@
 <?php include __DIR__ . '/../header.php'; ?>
-<?php  /** Article $article */ ?>
-<?php foreach ($articles as $article): ?>
-    <h2><a href="/articles/<?= $article->getId() ?>"><?= $article->getName() ?></a></h2>
-    <p><?= $article->getText() ?></p>
-    <hr>
-<?php endforeach; ?>
+<h1><?= $article->getName() ?></h1>
+<p><?= $article->getText() ?></p>
+<p>Автор: <?= $article->getAuthor()->getNickname() ?></p>
 <?php include __DIR__ . '/../footer.php'; ?>
