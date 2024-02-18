@@ -4,14 +4,14 @@ namespace MyProject\View;
 
 class View
 {
-    private $templatesPath;
+    private string $templatesPath;
 
     public function __construct(string $templatesPath)
     {
         $this->templatesPath = $templatesPath;
     }
 
-    public function renderHtml(string $templateName, array $vars = [], int $code = 200)
+    public function renderHtml(string $templateName, array $vars = [], int $code = 200): void
     {
         http_response_code($code);
         extract($vars);

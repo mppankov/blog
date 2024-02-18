@@ -28,7 +28,7 @@ class Db
         if (false === $result) {
             return null;
         }
-
+//PDO::FETCH_CLASS - возвращает результат в виде объекта какого-то класса
         return $sth->fetchAll(PDO::FETCH_CLASS, $className);
     }
 }

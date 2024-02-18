@@ -3,7 +3,6 @@
 namespace MyProject\Controllers;
 
 use MyProject\Models\Articles\Article;
-use MyProject\Models\Users\User;
 use MyProject\View\View;
 
 class ArticlesController
@@ -15,7 +14,8 @@ class ArticlesController
         $this->view = new View(__DIR__ . '/../../../templates');
     }
 
-    public function view(int $articleId): void
+    //action
+    public function view(int $articleId)
     {
         $article = Article::getById($articleId);
 
@@ -24,8 +24,6 @@ class ArticlesController
             return;
         }
 
-        $this->view->renderHtml('articles/view.php', [
-            'article' => $article,
-        ]);
+        $this->view->renderHtml('articles/view.php', ['article' => $article]);
     }
 }

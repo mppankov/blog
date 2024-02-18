@@ -23,7 +23,6 @@ abstract class ActiveRecordEntity
     {
         return lcfirst(str_replace('_', '', ucwords($source, '_')));
     }
-
     public static function findAll(): array
     {
         $db = new Db();
