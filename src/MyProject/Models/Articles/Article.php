@@ -18,6 +18,11 @@ class Article extends ActiveRecordEntity
         return $this->name;
     }
 
+    public function setName(string $name): string
+    {
+        return $this->name = $name;
+    }
+
     public function getAuthor(): User
     {
         return User::getById($this->authorId);
@@ -26,6 +31,11 @@ class Article extends ActiveRecordEntity
     public function getText(): string
     {
         return $this->text;
+    }
+
+    public function setText(string $text): string
+    {
+        return $this->text = $text;
     }
 
     protected static function getTableName(): string
