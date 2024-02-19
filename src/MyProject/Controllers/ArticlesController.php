@@ -15,7 +15,7 @@ class ArticlesController
     }
 
     //action
-    public function view(int $articleId)
+    public function view(int $articleId): void
     {
         $article = Article::getById($articleId);
 
@@ -23,7 +23,6 @@ class ArticlesController
             $this->view->renderHtml('errors/404.php', [], 404);
             return;
         }
-
         $this->view->renderHtml('articles/view.php', ['article' => $article]);
     }
 }

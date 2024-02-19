@@ -7,6 +7,7 @@ use MyProject\Models\Users\User;
 
 class Article extends ActiveRecordEntity
 {
+    // Object Relational Mapping - структура класса совпадает с БД(свойства => столбцы). При работе с объектами меняется БД и наоборот.
     protected string $name;
     protected string $text;
     protected string $authorId;
