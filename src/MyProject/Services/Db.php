@@ -6,7 +6,7 @@ use PDO;
 
 class Db
 {
-    private static Db $instance;
+    private static $instance;
     private PDO $pdo;
 
     private function __construct()
